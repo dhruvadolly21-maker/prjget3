@@ -1,0 +1,9 @@
+from moviepy.editor import VideoFileClip
+from moviepy.editor import vfx
+
+
+
+def change_speed(input_path, factor, output):
+    clip = VideoFileClip(input_path)
+    new_clip = clip.fx(vfx.speedx, factor)
+    new_clip.write_videofile(output)
