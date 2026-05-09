@@ -1,0 +1,6 @@
+from moviepy.editor import VideoFileClip
+
+
+def cut_video(input_path, start, end, output):
+    clip = VideoFileClip(input_path).subclip(start, end)
+    clip.write_videofile(output)
