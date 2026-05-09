@@ -1,0 +1,14 @@
+from moviepy.editor import VideoFileClip
+
+
+def get_metadata(video_path):
+    clip = VideoFileClip(video_path)
+
+    metadata = {
+        "duration_seconds": clip.duration,
+        "fps": clip.fps,
+        "resolution": clip.size,
+        "audio": clip.audio is not None
+    }
+
+    return metadata
