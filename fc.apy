@@ -1,0 +1,4 @@
+from moviepy.editor import VideoFileClip
+def convert_format(input_path, output):
+    clip = VideoFileClip(input_path)
+    clip.write_videofile(output)
